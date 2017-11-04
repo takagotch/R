@@ -1,0 +1,5 @@
+library(ggplot2)
+png("heart_sounds.png")
+data <- read.csv(file='heartbeat.csv', header=TRUE)
+ggplot(data=data) + geom_point(aes(x=time, y=ch1), size = 0.8)
+dev.off()
